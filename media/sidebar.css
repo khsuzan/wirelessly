@@ -1,0 +1,118 @@
+body {
+    font-family: var(--vscode-font-family, 'Segoe UI', Arial, sans-serif);
+    background: var(--vscode-sideBar-background);
+    color: var(--vscode-foreground);
+    margin: 0;
+    padding: 0 0 24px 0;
+    font-size: var(--vscode-font-size, 13px);
+}
+.container {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 0 0 24px 0;
+}
+.header {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 24px 0 12px 0;
+}
+.header svg {
+    margin-right: 8px;
+}
+.vscode-button {
+    margin-bottom: 18px;
+    border-radius: 0;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: 500;
+    box-shadow: none;
+}
+.vscode-button svg {
+    margin-right: 8px;
+}
+.section-label {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--vscode-descriptionForeground);
+    margin: 18px 0 6px 0;
+    letter-spacing: 1px;
+}
+.divider {
+    border: none;
+    border-top: 1px solid var(--vscode-sideBarSectionHeader-border, #e1e1e1);
+    margin: 16px 0 12px 0;
+}
+.device-list {
+    margin: 0 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+.device-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+.dot.connected { background: #1ec773; }
+.dot.available { background: #7a7a7a; }
+.device-info {
+    display: flex;
+    flex-direction: column;
+}
+.device-name {
+    font-size: 1rem;
+}
+.device-time {
+    font-size: 0.85rem;
+    color: var(--vscode-descriptionForeground);
+}
+.menu-btn {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--vscode-foreground);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 2px 6px;
+}
+.device-item:hover .menu-btn {
+    display: block;
+}
+.device-menu {
+    display: none;
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--vscode-editor-background);
+    border: 1px solid var(--vscode-sideBarSectionHeader-border, #e1e1e1);
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    z-index: 10;
+    min-width: 120px;
+}
+.device-item.menu-open .device-menu {
+    display: block;
+}
+.device-menu-option {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--vscode-foreground);
+}
+.device-menu-option:hover {
+    background: var(--vscode-list-hoverBackground);
+}

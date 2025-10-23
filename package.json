@@ -9,15 +9,38 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "wirelessly.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "wirelessly.openPanel",
+        "title": "Open Wireless Debug Panel"
       }
-    ]
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "wirelesslyViewContainer",
+          "title": "Wirelessly",
+          "icon": "resources/wirelessly.svg"
+        }
+      ]
+    },
+    "views": {
+      "wirelesslyViewContainer": [
+        {
+          "id": "wirelesslySidebarView",
+          "name": "Wireless Debug",
+          "icon": "resources/wirelessly.svg",
+          "type": "webview"
+        }
+      ]
+    },
+    "menus": {}
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
